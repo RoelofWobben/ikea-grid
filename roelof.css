@@ -1,0 +1,109 @@
+:root {
+    --black: #000000; 
+    --yellow: #f2f2f2;
+    --grey: #cccccc; 
+    --light-grey: #dfdfdf;
+    --dark-grey: #484848;
+    --blue: #0058a3; 
+}
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    display: grid; 
+    justify-items: center;
+    flex-direction: column;  
+}
+
+p{
+    font-weight: 900; 
+}
+
+
+/*  
+
+----------------------  Mobile ------------------------ 
+
+*/ 
+
+@media screen and (max-width: 1399px) {
+
+    .container {
+        display: grid; 
+        grid-auto-columns: 1fr; 
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+        gap: 0px 0px;
+        width: 375px;  
+         
+    }
+
+    .header { 
+        grid-area: 1 / 1 / 2 / 2;
+        height: 80px; 
+     }
+
+    .menu {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: space-between;
+        margin-left: 10px; 
+        margin-right: 20px; 
+       
+    }
+
+    .input {
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-right: 20px; 
+        border: 3px solid var(--black);
+        display: flex;
+        background-color: var(--yellow);
+        
+    }
+
+    .input img {
+        height: 30px; 
+        width: 30px; 
+
+    }
+
+    input {
+        border: none; 
+        display: flex; 
+        justify-content: center;
+        background-color: var(--yellow);
+        width: 300px;  
+    }
+
+    .logo { 
+        grid-area: 2 / 1 / 4 / 2;
+        width: 375px; 
+        height: 220px;
+        margin-left: 10px;
+        margin-right: 20px;  
+     }
+
+     .logo img {
+        width: 375px; 
+        height: 220px; 
+     }
+
+
+    .bronden { grid-area: 4 / 1 / 5 / 2; }
+    .image1 { grid-area: 5 / 1 / 6 / 2; }
+    .image2 { grid-area: 6 / 1 / 7 / 2; }
+    .text { grid-area: 7 / 1 / 8 / 2; }
+    .kleurkeuze { grid-area: 8 / 1 / 10 / 2; }
+    .afmeting { grid-area: 10 / 1 / 11 / 2; }
+    .info { grid-area: 11 / 1 / 12 / 2; }
+    .levering { grid-area: 12 / 1 / 14 / 2; }
+    .button { grid-area: 13 / 1 / 14 / 2; }
+}
