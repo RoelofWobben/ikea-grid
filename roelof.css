@@ -19,11 +19,19 @@ body {
     width: 100vw;
     display: grid; 
     justify-items: center;
-    flex-direction: column;  
+    flex-direction: column;
 }
 
 p{
-    font-weight: 900; 
+    font-weight: 500; 
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 900;
+    padding-bottom: 20px;
+    padding-left: 20px; 
+
 }
 
 
@@ -41,14 +49,18 @@ p{
         grid-template-columns: 1fr; 
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
         gap: 0px 0px;
-        width: 375px;  
+        width: 375px;
+        padding-top: 20px;
+        height: 800px;
+           
          
     }
 
     .header { 
         grid-area: 1 / 1 / 2 / 2;
-        height: 80px; 
-     }
+        height: 90px;
+        width: 380px;  
+    }
 
     .menu {
         display: flex; 
@@ -66,6 +78,7 @@ p{
         border: 3px solid var(--black);
         display: flex;
         background-color: var(--yellow);
+        width: 290px; 
         
     }
 
@@ -80,30 +93,201 @@ p{
         display: flex; 
         justify-content: center;
         background-color: var(--yellow);
-        width: 300px;  
+        width: 280px;  
     }
 
     .logo { 
         grid-area: 2 / 1 / 4 / 2;
-        width: 375px; 
-        height: 220px;
         margin-left: 10px;
-        margin-right: 20px;  
+        margin-right: 20px;
+        height: 220px;
+        width: 350px;     
      }
 
      .logo img {
-        width: 375px; 
+        width: 350px; 
         height: 220px; 
      }
 
 
-    .bronden { grid-area: 4 / 1 / 5 / 2; }
-    .image1 { grid-area: 5 / 1 / 6 / 2; }
-    .image2 { grid-area: 6 / 1 / 7 / 2; }
-    .text { grid-area: 7 / 1 / 8 / 2; }
-    .kleurkeuze { grid-area: 8 / 1 / 10 / 2; }
-    .afmeting { grid-area: 10 / 1 / 11 / 2; }
-    .info { grid-area: 11 / 1 / 12 / 2; }
-    .levering { grid-area: 12 / 1 / 14 / 2; }
-    .button { grid-area: 13 / 1 / 14 / 2; }
+    .bronden { 
+        grid-area: 4 / 1 / 5 / 2;
+        height: 165px;
+    }
+
+    .bronden h1 {
+        font-size: 1.8rem;
+        margin-top: 20px;
+        margin-left: 25px;
+        margin-bottom: 20px;    
+    }
+
+    .bronden p {
+        font-weight: 500;
+        margin-left: 25px;
+        margin-right: 30px;
+        font-size: 12px;     
+    }
+
+    .underline {
+        text-decoration: underline; 
+    }
+
+    .bronden .price {
+        font-size: 1.8rem;
+        font-weight: 900;
+        margin-top: 20px;   
+    }
+
+    .image1 { 
+        grid-area: 5 / 1 / 6 / 2;
+        height: 220px;
+        overflow: hidden;
+        margin-bottom: 20px;    
+    }
+
+    .image1 img {
+        width: 340px; 
+        height: 345px;
+        margin-left: 20px;
+        margin-top: -100px;
+    }
+
+
+    .image2 { 
+        grid-area: 6 / 1 / 7 / 2;
+        width: 360px; 
+        height: 180px;
+        overflow: hidden;
+        margin-bottom: 30px ;    
+    }
+
+    .image2 img {
+        width: 340px; 
+        height: 345px;
+        margin-left: 20px;  
+    }
+
+
+
+    .text { 
+        grid-area: 7 / 1 / 8 / 2; 
+    }
+
+    .text p {
+        margin-left: 20px;
+        margin-right: 25px; 
+        font-weight: 500;
+        font-size: 14px;
+        padding-bottom: 25px;
+        border-bottom: 1px solid var(--grey); 
+    }
+
+    .kleurkeuze { 
+        grid-area: 8 / 1 / 10 / 2;
+        padding-top: 20px;
+        width: 280px;
+        height: 200px;  
+    }
+
+    .colors {
+        display: flex;
+        height: 120px; 
+        border-bottom: 1px solid var(--grey); 
+    }
+
+    .color {
+        border: 1px solid var(--light-grey); 
+        padding-top: 5px;
+        margin-left: 5px; 
+        width: 85px;
+        height: 78px ; 
+        border-radius: 10px;
+    }
+
+
+    .afmeting_container { 
+        grid-area: 10 / 1 / 11 / 2;
+        height: 120px;
+        border-bottom: 1px solid var(--grey); 
+    }
+
+    .afmetingen {
+        display: flex;
+        width: 370px;  
+    }
+
+    .afmeting  {
+        border: 1px solid var(--light-grey); 
+        padding-top: 5px;
+        padding-left: 10px; 
+        width: 100px;
+        height: 30px ; 
+        border-radius: 10px;
+        font-weight: 400; 
+    }
+
+    .afmeting p {
+        text-decoration:  underline;
+        font-size: 14px; 
+    }
+
+    
+    .info { 
+        grid-area: 11 / 1 / 12 / 2;
+        margin-top: 20px;
+        margin-bottom: 20px; 
+        display: flex; 
+        justify-content: space-between;
+        width: 340px;
+        border-bottom: 1px solid var(--grey);
+        height: 45px;    
+    }
+
+    .arrow {
+        width: 30px; 
+        height: 30px; 
+    }
+
+    .levering { 
+        grid-area: 12 / 1 / 14 / 2;
+        height: 600px;  
+    }
+
+    .delivery_options {
+        margin-left: 20px; 
+        border: 1px solid var(--grey); 
+        border-radius: 10px;
+        width: 340px;
+        margin-bottom: 30px; 
+    }
+
+    .delivery_option {
+        display: flex; 
+        flex-direction: row;
+        padding-left: 10px;
+        padding-top: 10px;  
+    }
+
+    .option h3 {
+        font-size: 16px; 
+    }
+
+    .option p {
+        color: var(--dark-grey); 
+    }
+
+    .icon {
+        width: 60px; 
+        height: 60px; 
+    }
+
+    .icon img {
+        width : 40px; 
+        height: 40px; 
+    }
+
+    .button { 
+        grid-area: 13 / 1 / 14 / 2; 
+    }
 }
