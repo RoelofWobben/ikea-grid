@@ -14,12 +14,12 @@
 }
 
 body {
-    font-size: 18px;
-    font-family: 'Roboto', sans-serif;
     width: 100vw;
     display: grid; 
     justify-items: center;
     flex-direction: column;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
 }
 
 p{
@@ -34,6 +34,63 @@ h2 {
 
 }
 
+.color:hover,
+.afmeting_container:hover
+{
+   border: 1px solid black;
+}
+
+.color:hover, 
+.icon img:hover,
+.afmeting_container:hover, 
+.btn:hover , 
+.info:hover 
+ {
+  cursor: pointer;
+}
+
+.menu {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    width: 375px;  
+   
+}
+
+.input img {
+    height: 30px; 
+    width: 30px; 
+}
+
+.arrow {
+    width: 30px; 
+    height: 30px; 
+}
+
+.icon {
+    width: 60px; 
+    height: 60px; 
+}
+
+.icon img {
+    width: 40px; 
+    height: 40px; 
+}
+
+.delivery_option {
+    display: flex; 
+    flex-direction: row;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.delivery_options {
+    margin-left: 20px; 
+    border: 1px solid var(--grey); 
+    border-radius: 10px;
+    width: 340px;
+    margin-bottom: 30px; 
+}
 
 /*  
 
@@ -51,7 +108,7 @@ h2 {
         gap: 0px 0px;
         width: 375px;
         padding-top: 20px;
-        height: 800px;
+        height: 200px;
            
          
     }
@@ -60,15 +117,6 @@ h2 {
         grid-area: 1 / 1 / 2 / 2;
         height: 90px;
         width: 380px;  
-    }
-
-    .menu {
-        display: flex; 
-        flex-direction: row; 
-        justify-content: space-between;
-        margin-left: 10px; 
-        margin-right: 20px; 
-       
     }
 
     .input {
@@ -82,11 +130,7 @@ h2 {
         
     }
 
-    .input img {
-        height: 30px; 
-        width: 30px; 
-
-    }
+   
 
     input {
         border: none; 
@@ -103,12 +147,6 @@ h2 {
         height: 220px;
         width: 350px;     
      }
-
-     .logo img {
-        width: 350px; 
-        height: 220px; 
-     }
-
 
     .bronden { 
         grid-area: 4 / 1 / 5 / 2;
@@ -168,8 +206,6 @@ h2 {
         margin-left: 20px;  
     }
 
-
-
     .text { 
         grid-area: 7 / 1 / 8 / 2; 
     }
@@ -199,9 +235,10 @@ h2 {
     .color {
         border: 1px solid var(--light-grey); 
         padding-top: 5px;
+        padding-bottom: 5px; 
         margin-left: 5px; 
         width: 85px;
-        height: 78px ; 
+        height: 90px ; 
         border-radius: 10px;
     }
 
@@ -251,7 +288,8 @@ h2 {
 
     .levering { 
         grid-area: 12 / 1 / 14 / 2;
-        height: 600px;  
+        height: 350px;
+        width: 375px;   
     }
 
     .delivery_options {
@@ -266,7 +304,7 @@ h2 {
         display: flex; 
         flex-direction: row;
         padding-left: 10px;
-        padding-top: 10px;  
+        padding-top: 10px;
     }
 
     .option h3 {
@@ -288,6 +326,196 @@ h2 {
     }
 
     .button { 
-        grid-area: 13 / 1 / 14 / 2; 
+        grid-area: 13 / 1 / 14 / 2;
+        height: 50px;
+        padding-left:20px; 
+        padding-right: 20px;
+        padding-bottom: 20px;  
     }
+
+    .btn{
+        width: 340px;
+        background: var(--blue);
+        padding-top: 20px; 
+        padding-bottom: 20px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 18px; 
+        border-radius: 10px;
+        margin-bottom: 20px;      
+    }
+}
+
+@media screen and (min-width: 1440px) {
+
+    body {
+        height: 100vh;
+    }
+
+    .container {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          "header header header header"
+          "logo bronden image2 image2"
+          "image1 image1 image2 image2"
+          "image1 image1 kleurkeuze levering"
+          "image1 image1 afmeting_container levering"
+          "image1 image1 afmeting_container levering"
+          "text text info info";
+        width: 1440px;
+        height: 900px;    
+    }
+    
+    .header { 
+        grid-area: header; 
+        height: 80px;
+        display: grid; 
+        width: 1440px;  
+    }
+
+    .menu {
+        width: 360px;
+        margin-top: 20px;
+        margin-right: 360px
+    }
+
+    .input {
+        display: grid;
+        grid-area : 1/4/2/5;  
+        margin-left: 424px;
+        margin-top: 10px;
+        border: 3px solid var(--black);
+        background-color: var(--yellow);
+        width: 290px;
+        height: 50px; 
+        
+    }
+
+    input {
+        border: none; 
+        display: flex; 
+        justify-content: center;
+        background-color: var(--yellow);
+        width: 284px;
+        padding-left: 20px; 
+    }
+    
+    .logo { 
+        grid-area: logo;
+        height: 220px;
+        width: 360px;     
+    }
+    
+    .logo img {
+        height: 220px; 
+        width: 360px; 
+    }
+    
+    
+    
+    .image1 { 
+        grid-area: image1;
+        width: 750px;
+        height: 600px; 
+        overflow: hidden;  
+    }
+
+    .image1 img {
+        width: 715px;
+        height: 759px;  
+    }
+    
+    .bronden { 
+        grid-area: bronden;
+        padding: 20px 10px; 
+    }
+    
+    .text { 
+        grid-area: text;
+        margin-top: 220px;  
+    }
+
+    .text p {
+        font-size: 16px; 
+    }
+    
+    .image2 { 
+        grid-area: image2; 
+        width: 750px;
+        height: 450px;
+        overflow: hidden;   
+    }
+
+    .image2 img {
+        width: 720px;
+        height: 759px;  
+    }
+    
+    .kleurkeuze { 
+        grid-area: kleurkeuze;
+        margin-top: 250px;
+        width: 375px;   
+    }
+
+    .kleurkeuze h2 {
+        padding-left: 20px; 
+    }
+
+    .colors {
+        display: flex;
+        padding-left: 15px;
+        padding-bottom: 20px; 
+        border-bottom: 1px solid var(--grey); 
+    }
+
+    .color {
+        border: 1px solid var(--light-grey); 
+        padding-top: 5px;
+        padding-bottom: 5px; 
+        margin-left: 5px; 
+        width: 85px;
+        height: 90px ; 
+        border-radius: 10px;
+    }
+      
+    .productinformatie { grid-area: productinformatie; }
+    
+    .afmeting_container { 
+        grid-area: afmeting_container;
+        height: 200px;  
+    }
+
+    .afmetingen {
+        display: flex; 
+        padding-left: 20px; 
+    }
+
+    .afmeting  {
+        border: 1px solid var(--light-grey); 
+        padding-top: 5px;
+        padding-left: 20px; 
+        width: 100px;
+        height: 30px ; 
+        border-radius: 10px;
+        font-weight: 400;
+        margin-left: 10px;  
+    }
+
+    .afmeting p {
+        font-size: 12px;
+        text-decoration:  underline; 
+    }
+
+    .info {
+        grid-area : info; 
+    }
+
+   .levering { 
+      grid-area: levering;
+      padding-top: 250px;  
+   }
 }
