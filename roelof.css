@@ -1,3 +1,10 @@
+/*  INDEX
+    BASE
+    MOBILE
+    DESKTOP
+*/
+
+/* BASE START */
 :root {
     --black: #000000; 
     --yellow: #f2f2f2;
@@ -68,8 +75,9 @@ h2 {
 }
 
 .icon {
-    width: 60px; 
-    height: 60px; 
+    width: 40px; 
+    height: 40px;
+    margin-right: 20px;  
 }
 
 .icon img {
@@ -88,9 +96,33 @@ h2 {
     margin-left: 20px; 
     border: 1px solid var(--grey); 
     border-radius: 10px;
-    width: 340px;
+    width: 320px;
     margin-bottom: 30px; 
 }
+
+.option h3 {
+    font-size: 16px; 
+}
+
+.option p {
+    color: var(--dark-grey);
+    font-size: 16px; 
+}
+
+.btn{
+    width: 320px;
+    background: var(--blue);
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 18px; 
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;       
+}
+/* BASE END */
 
 /*  
 
@@ -108,7 +140,7 @@ h2 {
         gap: 0px 0px;
         width: 375px;
         padding-top: 20px;
-        height: 200px;
+        height: 1750px;
            
          
     }
@@ -147,6 +179,11 @@ h2 {
         height: 220px;
         width: 350px;     
      }
+
+     .logo img {
+        height: 220px; 
+        width: 360px; 
+    }
 
     .bronden { 
         grid-area: 4 / 1 / 5 / 2;
@@ -297,7 +334,7 @@ h2 {
         border: 1px solid var(--grey); 
         border-radius: 10px;
         width: 340px;
-        margin-bottom: 30px; 
+        margin-bottom: 30px;
     }
 
     .delivery_option {
@@ -305,24 +342,20 @@ h2 {
         flex-direction: row;
         padding-left: 10px;
         padding-top: 10px;
+        margin-bottom: 10px; 
     }
 
-    .option h3 {
-        font-size: 16px; 
-    }
-
-    .option p {
-        color: var(--dark-grey); 
-    }
+    
 
     .icon {
         width: 60px; 
-        height: 60px; 
+        height: 60px;
+        margin-top: 10px;  
     }
 
     .icon img {
         width : 40px; 
-        height: 40px; 
+        height: 40px;
     }
 
     .button { 
@@ -333,20 +366,14 @@ h2 {
         padding-bottom: 20px;  
     }
 
-    .btn{
-        width: 340px;
-        background: var(--blue);
-        padding-top: 20px; 
-        padding-bottom: 20px;
-        color: white;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 900;
-        font-size: 18px; 
-        border-radius: 10px;
-        margin-bottom: 20px;      
-    }
+    
 }
 
+/*  
+
+----------------------  Desktop ------------------------ 
+
+*/ 
 @media screen and (min-width: 1440px) {
 
     body {
@@ -367,7 +394,7 @@ h2 {
           "image1 image1 afmeting_container levering"
           "text text info info";
         width: 1440px;
-        height: 900px;    
+        height: 980px;    
     }
     
     .header { 
@@ -384,14 +411,15 @@ h2 {
     }
 
     .input {
-        display: grid;
+        display: flex;
         grid-area : 1/4/2/5;  
         margin-left: 424px;
         margin-top: 10px;
         border: 3px solid var(--black);
         background-color: var(--yellow);
         width: 290px;
-        height: 50px; 
+        height: 50px;
+        align-items: center;  
         
     }
 
@@ -425,27 +453,29 @@ h2 {
     }
 
     .image1 img {
-        width: 715px;
+        width: 735px;
         height: 759px;  
     }
     
     .bronden { 
         grid-area: bronden;
-        padding: 20px 10px; 
+        padding: 20px 10px;
+        width: 375px;  
     }
     
     .text { 
         grid-area: text;
-        margin-top: 220px;  
+        margin-top: 30px;  
     }
 
     .text p {
-        font-size: 16px; 
+        font-size: 16px;
+        padding-right: 20px 
     }
     
     .image2 { 
         grid-area: image2; 
-        width: 750px;
+        width: 710px;
         height: 450px;
         overflow: hidden;   
     }
@@ -457,7 +487,7 @@ h2 {
     
     .kleurkeuze { 
         grid-area: kleurkeuze;
-        margin-top: 250px;
+        margin-top: 165px;
         width: 375px;   
     }
 
@@ -511,11 +541,14 @@ h2 {
     }
 
     .info {
-        grid-area : info; 
+        grid-area : info;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;  
     }
 
    .levering { 
       grid-area: levering;
-      padding-top: 250px;  
+      padding-top: 170px;  
    }
 }
